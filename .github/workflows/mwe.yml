@@ -19,4 +19,4 @@ jobs:
     - name: Pip install step
       shell: bash
       run: |
-        pip3 install -r h5py
+        pip3 install h5py
