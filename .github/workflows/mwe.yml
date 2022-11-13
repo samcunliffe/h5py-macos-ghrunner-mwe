@@ -6,17 +6,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  os:
-  - macos-12
-  steps:
-  - name: Check out repository
-    uses: actions/checkout@v3
+  mwe:
+    runs-on: macos-12
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
 
-  #- name: Install dependencies
-  #  run: |
-  #    brew install fftw
+    #- name: Install dependencies
+    #  run: |
+    #    brew install hdf5
 
-  - name: Install Python dependencies
-    shell: bash
-    run: |
-      pip3 install -r h5py
+    - name: Pip install step
+      shell: bash
+      run: |
+        pip3 install -r h5py
