@@ -1,0 +1,22 @@
+name: h5py MacOS MWE
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  os:
+  - macos-12
+  steps:
+  - name: Check out repository
+    uses: actions/checkout@v3
+
+  #- name: Install dependencies
+  #  run: |
+  #    brew install fftw
+
+  - name: Install Python dependencies
+    shell: bash
+    run: |
+      pip3 install -r h5py
